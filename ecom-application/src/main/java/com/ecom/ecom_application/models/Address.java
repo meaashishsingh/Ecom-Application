@@ -1,5 +1,4 @@
-package com.ecom.ecom_application.entity;
-
+package com.ecom.ecom_application.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,17 +8,20 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
 @NoArgsConstructor
-//@Entity(name="User_Table")
-//@Entity(name="User_Table") This will create a table User_Table in your database.
-@Entity
-public class User {
+@AllArgsConstructor
+@Data
+@Entity(name="address")
+public class Address {
+
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String firstName;
-    private String lastName;
+    private String street;
+    private String city;
+    private  String state;
+    private String country;
+    private  String zipcode;
 }
