@@ -29,7 +29,7 @@ public class UserServiceImp implements UserService {
     @Override
     public UserDto createUser(UserDto userDto) {
       User newUser=modelMapper.map(userDto,User.class);
-        System.out.println("data  "+newUser.getFirstName()+" "+userDto.getLastName());
+     System.out.println("data  "+userDto.getFirstName()+" "+userDto.getLastName());
       User user=userRepository.save(newUser);
       return modelMapper.map(user,UserDto.class);
     }
